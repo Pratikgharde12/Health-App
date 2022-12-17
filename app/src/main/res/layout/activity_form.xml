@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bggradient"
+    android:background="@drawable/gradient_drawable"
     tools:context=".Form"
     tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="0dp">
@@ -158,10 +158,10 @@
         android:id="@+id/RadioGroup"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/buttonBMI"
         app:layout_constraintEnd_toEndOf="@id/guidelineRight"
         app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
-        app:layout_constraintTop_toBottomOf="@id/textViewcyg">
+        app:layout_constraintTop_toBottomOf="@id/textViewcyg"
+        app:layout_constraintBottom_toTopOf="@id/buttonCalculateBoth">
 
         <RadioButton
             android:id="@+id/radioButtonM"
@@ -179,47 +179,20 @@
     </RadioGroup>
 
     <Button
-        android:id="@+id/buttonBMI"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/white"
-        android:onClick="showBMI"
-        android:text="Show BMI"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="@id/buttonBMR"
-        app:layout_constraintEnd_toStartOf="@+id/buttonBMR"
-        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
-        app:layout_constraintTop_toTopOf="@id/buttonBMR"
-        app:layout_constraintHorizontal_chainStyle="spread" />
-
-    <Button
-        android:id="@+id/buttonBMR"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/white"
-        android:onClick="showBMR"
-        android:text="Show BMR"
-        android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/RadioGroup"
-        app:layout_constraintEnd_toEndOf="@id/guidelineRight"
-        app:layout_constraintStart_toEndOf="@id/buttonBMI"
-        app:layout_constraintBottom_toBottomOf="@id/guidelineBottom"
-        />
-
-    <Button
         android:id="@+id/buttonCalculateBoth"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Calculate Both"
-
-        tools:layout_editor_absoluteY="647dp"
-        android:textColor="@color/black"
         android:backgroundTint="#ffffff"
-        android:onClick="CalculateBoth"
-        app:layout_constraintEnd_toEndOf="@+id/buttonBMR"
-        app:layout_constraintStart_toStartOf="@+id/buttonBMI"
+        android:layout_marginHorizontal="10dp"
+        android:onClick="Calculate"
+        android:text="Calculate "
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@id/guidelineBottom"
-        app:layout_constraintTop_toBottomOf="@id/buttonBMI"/>
+        app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@+id/RadioGroup"
+         />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

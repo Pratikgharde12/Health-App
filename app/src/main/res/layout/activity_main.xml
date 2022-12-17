@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient_drawable"
     tools:context=".MainActivity">
 
 
@@ -38,7 +39,7 @@
     <ImageView
         android:id="@+id/healthFitLogo"
         android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_height="0dp"
         android:src="@drawable/healthfit"
         app:layout_constraintBottom_toTopOf="@id/welcomeToHealthFit"
         app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
@@ -53,7 +54,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
         android:text="Welcome to FitHealth"
-        android:textColor="@color/black"
+        android:textColor="#ffff"
         android:textSize="25sp"
         app:layout_constraintBottom_toTopOf="@id/description"
         app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
@@ -66,6 +67,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="68dp"
         android:text="The best app to know your BMI and BMR"
+        android:textColor="#ffff"
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
@@ -75,7 +77,7 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="380dp"
+        android:layout_width="350dp"
         android:layout_height="300dp"
         android:src="@drawable/undraw_fitness"
         app:layout_constraintStart_toStartOf="@id/guidelineLeft"
@@ -86,11 +88,13 @@
 
     <Button
         android:id="@+id/buttonGetStarted"
-        android:layout_width="221dp"
-        android:layout_height="53dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="64dp"
         android:text="Get Started"
-        android:backgroundTint="#0A9600"
+        android:layout_marginHorizontal="10dp"
+        android:textColor="@color/black"
+        android:backgroundTint="#ffff"
         app:layout_constraintBottom_toTopOf="@+id/guidelineBottom"
         app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
         app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
